@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    border: 2px solid black;
+}
+
+.btn_gen_grid {
+    margin-bottom: 10px;
+}
+
+.box {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
