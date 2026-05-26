@@ -32,11 +32,13 @@ function makeGrid(size) {
             div.addEventListener('mouseover', () => {
                 div.style.backgroundColor = getRandomRGB();
             })
-            div.addEventListener('touchmove', () => {
-                div.style.backgroundColor = getRandomRGB();
-            })
-            div.addEventListener('touchstart', () => {
-                div.style.backgroundColor = getRandomRGB();
+            container.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const element = document.elementFromPoint(touch.clientX, touch.clientY);
+            if (element.classList.contains('box')) {
+                element.style.backgroundColor = getRandomRGB();
+            }
             })
 
             container.appendChild(div); 
